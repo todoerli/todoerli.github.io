@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.chunfengshini.com/"/>
-  <updated>2017-01-16T07:32:50.088Z</updated>
+  <updated>2017-01-16T07:52:14.492Z</updated>
   <id>http://www.chunfengshini.com/</id>
   
   <author>
@@ -20,21 +20,17 @@
     <link href="http://www.chunfengshini.com/2017/01/10/%E5%AE%89%E5%8D%93Nexus%206P%E6%89%8B%E6%9C%BARoot%E5%90%8E%E9%80%9A%E8%BF%87FlashFire%E5%8D%87%E7%BA%A7%E7%B3%BB%E7%BB%9F/"/>
     <id>http://www.chunfengshini.com/2017/01/10/安卓Nexus 6P手机Root后通过FlashFire升级系统/</id>
     <published>2017-01-10T06:46:55.718Z</published>
-    <updated>2017-01-16T07:32:50.088Z</updated>
+    <updated>2017-01-16T07:52:14.492Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="简要情况"><a href="#简要情况" class="headerlink" title="简要情况"></a>简要情况</h2><p>Nexus 6P升级到Android 7.0 系统后解锁、Root并安装了SuperSU、冰箱等软件。Root之后手机不能通过OTA直接升级系统，但是系统推送过来的安全补丁一直显示在通知栏，很不美观。于是就寻找一些方便的方法升级，了解到可以通过FlashFire这个软件更新系统并继续保持Root状态。</p>
-<h2 id="升级步骤"><a href="#升级步骤" class="headerlink" title="升级步骤"></a>升级步骤</h2><ul>
-<li>将冰箱中的所有应用解冻</li>
-<li>通过<a href="https://developers.google.cn/android/images" target="_blank" rel="external">developers.google.cn/android/images</a> 网站下载最新Factory image.比如7.1.1 (N4F26J, Jan 2017).得到angler-n4f26j-factory-01874fd6.zip文件，大小1.25GB。拷贝到手机。</li>
-<li>打开FlashFire软件，点击右下角+加号，选择Flash firmware package，找到保存到手机的angler-n4f26j-factory-01874fd6.zip文件并选择.FlashFire会分析该镜像文件。</li>
-<li>选择刷入Boot、system、vendor和cache分区，不要选择recovery和data。</li>
-<li>点击Flash开始更新，系统会自动关机重启，更新完之后会再次重启。</li>
-</ul>
+    <content type="html"><![CDATA[<h2 id="简要情况"><a href="#简要情况" class="headerlink" title="简要情况:"></a>简要情况:</h2><p>Nexus 6P升级到Android 7.0 系统后解锁、Root并安装了SuperSU、冰箱等软件。Root之后手机不能通过OTA直接升级系统，但是系统推送过来的安全补丁一直显示在通知栏，很不美观。于是就寻找一些方便的方法升级，了解到可以通过FlashFire这个软件更新系统并继续保持Root状态。</p>
+<h2 id="升级步骤"><a href="#升级步骤" class="headerlink" title="升级步骤"></a>升级步骤</h2><h4 id="1-将冰箱中的所有应用解冻"><a href="#1-将冰箱中的所有应用解冻" class="headerlink" title="1. 将冰箱中的所有应用解冻"></a>1. 将冰箱中的所有应用解冻</h4><h4 id="2-通过developers-google-cn-android-images-网站下载最新Factory-image-比如7-1-1-N4F26J-Jan-2017-得到angler-n4f26j-factory-01874fd6-zip文件，大小1-25GB。拷贝到手机。"><a href="#2-通过developers-google-cn-android-images-网站下载最新Factory-image-比如7-1-1-N4F26J-Jan-2017-得到angler-n4f26j-factory-01874fd6-zip文件，大小1-25GB。拷贝到手机。" class="headerlink" title="2. 通过developers.google.cn/android/images 网站下载最新Factory image.比如7.1.1 (N4F26J, Jan 2017).得到angler-n4f26j-factory-01874fd6.zip文件，大小1.25GB。拷贝到手机。"></a>2. 通过<a href="https://developers.google.cn/android/images" target="_blank" rel="external">developers.google.cn/android/images</a> 网站下载最新Factory image.比如7.1.1 (N4F26J, Jan 2017).得到angler-n4f26j-factory-01874fd6.zip文件，大小1.25GB。拷贝到手机。</h4><h4 id="3-打开FlashFire软件，点击右下角-加号，选择Flash-firmware-package，找到保存到手机的angler-n4f26j-factory-01874fd6-zip文件并选择-FlashFire会分析该镜像文件。"><a href="#3-打开FlashFire软件，点击右下角-加号，选择Flash-firmware-package，找到保存到手机的angler-n4f26j-factory-01874fd6-zip文件并选择-FlashFire会分析该镜像文件。" class="headerlink" title="3. 打开FlashFire软件，点击右下角+加号，选择Flash firmware package，找到保存到手机的angler-n4f26j-factory-01874fd6.zip文件并选择.FlashFire会分析该镜像文件。"></a>3. 打开FlashFire软件，点击右下角+加号，选择Flash firmware package，找到保存到手机的angler-n4f26j-factory-01874fd6.zip文件并选择.FlashFire会分析该镜像文件。</h4><p><img src="/uploads/images/wanji/select-img-file.png" alt="Scanning archive"></p>
+<h4 id="4-选择刷入Boot、system、vendor和cache分区，不要选择recovery和data。"><a href="#4-选择刷入Boot、system、vendor和cache分区，不要选择recovery和data。" class="headerlink" title="4. 选择刷入Boot、system、vendor和cache分区，不要选择recovery和data。"></a>4. 选择刷入Boot、system、vendor和cache分区，不要选择recovery和data。</h4><p><img src="/uploads/images/wanji/ready-to-flash.png" alt="选好要刷入的分区"></p>
+<h4 id="5-点击FLASH开始更新，系统会自动关机重启，更新完之后会再次重启。"><a href="#5-点击FLASH开始更新，系统会自动关机重启，更新完之后会再次重启。" class="headerlink" title="5. 点击FLASH开始更新，系统会自动关机重启，更新完之后会再次重启。"></a>5. 点击FLASH开始更新，系统会自动关机重启，更新完之后会再次重启。</h4><p><img src="/uploads/images/wanji/notice.png" alt="提示信息"><br><img src="/uploads/images/wanji/flashing.jpg" alt="flashing"><br><img src="/uploads/images/wanji/finishing-update.png" alt="finishing"><br><img src="/uploads/images/wanji/up-to-date.png" alt="up to date"></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;简要情况&quot;&gt;&lt;a href=&quot;#简要情况&quot; class=&quot;headerlink&quot; title=&quot;简要情况&quot;&gt;&lt;/a&gt;简要情况&lt;/h2&gt;&lt;p&gt;Nexus 6P升级到Android 7.0 系统后解锁、Root并安装了SuperSU、冰箱等软件。Root之后手机不能通
+      &lt;h2 id=&quot;简要情况&quot;&gt;&lt;a href=&quot;#简要情况&quot; class=&quot;headerlink&quot; title=&quot;简要情况:&quot;&gt;&lt;/a&gt;简要情况:&lt;/h2&gt;&lt;p&gt;Nexus 6P升级到Android 7.0 系统后解锁、Root并安装了SuperSU、冰箱等软件。Root之后手机不
     
     </summary>
     
