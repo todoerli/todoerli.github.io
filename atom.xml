@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>TodoerLi&#39;s Blog</title>
+  <subtitle>ToDo or not ToDo?</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://www.chunfengshini.com/"/>
+  <updated>2017-01-16T07:32:50.088Z</updated>
+  <id>http://www.chunfengshini.com/</id>
+  
+  <author>
+    <name>TodoerLi</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>安卓Nexus 6P手机Root后通过FlashFire升级系统</title>
+    <link href="http://www.chunfengshini.com/2017/01/10/%E5%AE%89%E5%8D%93Nexus%206P%E6%89%8B%E6%9C%BARoot%E5%90%8E%E9%80%9A%E8%BF%87FlashFire%E5%8D%87%E7%BA%A7%E7%B3%BB%E7%BB%9F/"/>
+    <id>http://www.chunfengshini.com/2017/01/10/安卓Nexus 6P手机Root后通过FlashFire升级系统/</id>
+    <published>2017-01-10T06:46:55.718Z</published>
+    <updated>2017-01-16T07:32:50.088Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="简要情况"><a href="#简要情况" class="headerlink" title="简要情况"></a>简要情况</h2><p>Nexus 6P升级到Android 7.0 系统后解锁、Root并安装了SuperSU、冰箱等软件。Root之后手机不能通过OTA直接升级系统，但是系统推送过来的安全补丁一直显示在通知栏，很不美观。于是就寻找一些方便的方法升级，了解到可以通过FlashFire这个软件更新系统并继续保持Root状态。</p>
+<h2 id="升级步骤"><a href="#升级步骤" class="headerlink" title="升级步骤"></a>升级步骤</h2><ul>
+<li>将冰箱中的所有应用解冻</li>
+<li>通过<a href="https://developers.google.cn/android/images" target="_blank" rel="external">developers.google.cn/android/images</a> 网站下载最新Factory image.比如7.1.1 (N4F26J, Jan 2017).得到angler-n4f26j-factory-01874fd6.zip文件，大小1.25GB。拷贝到手机。</li>
+<li>打开FlashFire软件，点击右下角+加号，选择Flash firmware package，找到保存到手机的angler-n4f26j-factory-01874fd6.zip文件并选择.FlashFire会分析该镜像文件。</li>
+<li>选择刷入Boot、system、vendor和cache分区，不要选择recovery和data。</li>
+<li>点击Flash开始更新，系统会自动关机重启，更新完之后会再次重启。</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;简要情况&quot;&gt;&lt;a href=&quot;#简要情况&quot; class=&quot;headerlink&quot; title=&quot;简要情况&quot;&gt;&lt;/a&gt;简要情况&lt;/h2&gt;&lt;p&gt;Nexus 6P升级到Android 7.0 系统后解锁、Root并安装了SuperSU、冰箱等软件。Root之后手机不能通
+    
+    </summary>
+    
+      <category term="生活" scheme="http://www.chunfengshini.com/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="玩机" scheme="http://www.chunfengshini.com/categories/%E7%94%9F%E6%B4%BB/%E7%8E%A9%E6%9C%BA/"/>
+    
+    
+      <category term="玩机" scheme="http://www.chunfengshini.com/tags/%E7%8E%A9%E6%9C%BA/"/>
+    
+      <category term="Nexus 6P" scheme="http://www.chunfengshini.com/tags/Nexus-6P/"/>
+    
+      <category term="FlashFire" scheme="http://www.chunfengshini.com/tags/FlashFire/"/>
+    
+      <category term="Root" scheme="http://www.chunfengshini.com/tags/Root/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://www.chunfengshini.com/2017/01/10/hello-world/"/>
+    <id>http://www.chunfengshini.com/2017/01/10/hello-world/</id>
+    <published>2017-01-10T05:41:44.628Z</published>
+    <updated>2017-01-08T13:03:44.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://www.chunfengshini.com/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://www.chunfengshini.com/tags/hexo/"/>
+    
+  </entry>
+  
+</feed>
