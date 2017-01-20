@@ -4,37 +4,8 @@
 
     
   <url>
-    <loc>http://www.chunfengshini.com/post/zhi_dao_xi_ting_ri_mu_chen_zui_bu_zhi_gui_lu/</loc>
-    <lastmod>2017-01-19T08:08:01.001Z</lastmod>
-    <data>
-        <display>
-        <title>直到溪亭日暮，沉醉不知归路</title>
-        <pubTime>2017-01-16T08:01:57.000Z</pubTime>
-        
-        <tag>元旦</tag>
-         
-        <tag>日出</tag>
-         
-        <tag>旅游</tag>
-         
-        <tag>乌镇</tag>
-         
-         
-           
-             
-              <breadCrumb title="生活" url="http://www.chunfengshini.com/categories/%E7%94%9F%E6%B4%BB/"/>
-          
-             
-              <breadCrumb title="随笔" url="http://www.chunfengshini.com/categories/%E7%94%9F%E6%B4%BB/%E9%9A%8F%E7%AC%94/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.chunfengshini.com/post/upgrading_rooted_nexus_6p_using_flashfire/</loc>
-    <lastmod>2017-01-19T08:04:18.241Z</lastmod>
+    <lastmod>2017-01-20T07:37:36.002Z</lastmod>
     <data>
         <display>
         <title>安卓Nexus 6P手机Root后通过FlashFire升级系统</title>
@@ -55,6 +26,35 @@
           
              
               <breadCrumb title="玩机" url="http://www.chunfengshini.com/categories/%E7%94%9F%E6%B4%BB/%E7%8E%A9%E6%9C%BA/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.chunfengshini.com/post/zhi_dao_xi_ting_ri_mu_chen_zui_bu_zhi_gui_lu/</loc>
+    <lastmod>2017-01-20T07:36:28.460Z</lastmod>
+    <data>
+        <display>
+        <title>直到溪亭日暮，沉醉不知归路</title>
+        <pubTime>2017-01-16T08:01:57.000Z</pubTime>
+        
+        <tag>元旦</tag>
+         
+        <tag>日出</tag>
+         
+        <tag>旅游</tag>
+         
+        <tag>乌镇</tag>
+         
+         
+           
+             
+              <breadCrumb title="生活" url="http://www.chunfengshini.com/categories/%E7%94%9F%E6%B4%BB/"/>
+          
+             
+              <breadCrumb title="随笔" url="http://www.chunfengshini.com/categories/%E7%94%9F%E6%B4%BB/%E9%9A%8F%E7%AC%94/"/>
           
         </display>
     </data>
