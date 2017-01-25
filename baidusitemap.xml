@@ -4,6 +4,34 @@
 
     
   <url>
+    <loc>http://www.chunfengshini.com/post/notes_for_oracle_procedure/</loc>
+    <lastmod>2017-01-25T06:58:10.114Z</lastmod>
+    <data>
+        <display>
+        <title>Oracle存储过程学习笔记</title>
+        <pubTime>2017-01-24T07:42:26.000Z</pubTime>
+        
+        <tag>Oracle Procedure</tag>
+         
+        <tag>存储过程</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://www.chunfengshini.com/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+             
+              <breadCrumb title="笔记" url="http://www.chunfengshini.com/categories/%E6%8A%80%E6%9C%AF/%E7%AC%94%E8%AE%B0/"/>
+          
+             
+              <breadCrumb title="存储过程" url="http://www.chunfengshini.com/categories/%E6%8A%80%E6%9C%AF/%E7%AC%94%E8%AE%B0/%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.chunfengshini.com/post/notes_for_character_set/</loc>
     <lastmod>2017-01-23T02:48:23.767Z</lastmod>
     <data>
