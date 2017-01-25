@@ -92,7 +92,7 @@
 <meta property="og:url" content="http://www.chunfengshini.com/post/notes_for_oracle_procedure/index.html">
 <meta property="og:site_name" content="TodoerLi's Blog">
 <meta property="og:description" content="记录下Oracle存储过程的基本语法等知识。">
-<meta property="og:updated_time" content="2017-01-25T06:58:10.114Z">
+<meta property="og:updated_time" content="2017-01-25T07:16:13.626Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Oracle存储过程学习笔记">
 <meta name="twitter:description" content="记录下Oracle存储过程的基本语法等知识。">
@@ -440,11 +440,11 @@
 <p>[]中指令是可选的。其中，AUTHID 指令可以告诉ORACLE该存储过程使用谁的权限运行。默任情况下，存储过程会作为调用者的过程运行。<br>IS或者AS关键词表明后面将跟随一个PL/SQL体，BEGIN关键词表明PL/SQL体的开始。PL/SQL体中至少需要有一句，如果写NULL PL/SQL语句表明什么都不做。<br>END关键词表明PL/SQL体的结束。</p>
 <h2 id="调用存储过程"><a href="#调用存储过程" class="headerlink" title="调用存储过程"></a>调用存储过程</h2><p>存储过程建立完成后，只要通过授权，用户就可以在SQLPLUS 、ORACLE开发工具或第三方开发工具中来调用运行。对于参数的传递也有三种：<strong>按位置传递</strong>、<strong>按名称传递</strong>和<strong>组合传递</strong>，传递方法与函数的一样。ORACLE <em>可以使用EXECUTE语句来实现对存储过程的调用：</em><br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">EXEC 存储过程名( 参数1, 参数2…,参数n);</div></pre></td></tr></table></figure></p>
 <h2 id="删除存储过程"><a href="#删除存储过程" class="headerlink" title="删除存储过程"></a>删除存储过程</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">DROP</span> <span class="keyword">PROCEDURE</span> 存储过程名;</div></pre></td></tr></table></figure>
-<h1 id="PL-SQL基础"><a href="#PL-SQL基础" class="headerlink" title="PL/SQL基础"></a>PL/SQL基础</h1><blockquote>
+<h1 id="2-PL-SQL基础"><a href="#2-PL-SQL基础" class="headerlink" title="2. PL/SQL基础"></a>2. PL/SQL基础</h1><blockquote>
 <p><a href="http://baike.baidu.com/view/470171.htm" target="_blank" rel="external">PL/SQL</a>是过程化SQL语言，是Oracle对标准数据库语言SQL的过程化扩充，它将数据库技术和过程化程序设计语言联系起来，是一种应用开发语言，可使用循环，分支处理数据，将SQL的数据操纵功能与过程化语言数据处理功能结合起来.PL/SQL的使用，使SQL成为一种高级程序设计语言，支持高级语言的块操作，条件判断，循环语句，嵌套等，与数据库核心的数据类型集成，使SQL 的程序设计效率更高.<br>PL/SQL块由四个基本部分组成：<strong>声明</strong>、<strong>执行体开始</strong>、<strong>异常处理</strong>、<strong>执行体结束</strong>。</p>
 </blockquote>
 <h2 id="PL-SQL块的基本结构"><a href="#PL-SQL块的基本结构" class="headerlink" title="PL/SQL块的基本结构"></a>PL/SQL块的基本结构</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">[<span class="keyword">DECLARE</span>]</div><div class="line">&lt;声明语句 &gt;</div><div class="line"><span class="keyword">BEGIN</span></div><div class="line">&lt;执行语句&gt;</div><div class="line">[<span class="keyword">EXCEPTION</span>]</div><div class="line">&lt;异常处理语句 &gt;</div><div class="line"><span class="keyword">END</span></div></pre></td></tr></table></figure>
-<p>[]中是可选部分。<br>PL/SQL块的书写必须遵循如下规定：<br>（1）PL/SQL块的每一条语句都必须以分号”;”结束；<br>（2）SQL语句可以是多行的，但分号表示该语句的结束。<br>（3）一行中可以有多条SQL语句，它们之间以分号分隔。<br>（4）每一个PL/SQL块由BEGIN或DECLARE开始，以END结束。<br>（5）语句的注释由“–”标示。  </p>
+<p>[]中是可选部分。<br>PL/SQL块的书写必须遵循如下规定：<br>（1）PL/SQL块的每一条语句都必须以分号”;”结束；<br>（2）SQL语句可以是多行的，但分号表示该语句的结束。<br>（3）一行中可以有多条SQL语句，它们之间以分号分隔。<br>（4）每一个PL/SQL块由BEGIN或DECLARE开始，以END结束。<br>（5）语句的注释由”–”标示。  </p>
 <h2 id="PL-SQL块类型"><a href="#PL-SQL块类型" class="headerlink" title="PL/SQL块类型"></a>PL/SQL块类型</h2><p>PL/SQL程序块分为：</p>
 <pre><code>1. 命名块；
 2. 匿名块；
@@ -567,8 +567,7 @@
 </tr>
 </tbody>
 </table>
-<p>##键盘输入和屏幕输出</p>
-<blockquote>
+<h2 id="键盘输入和屏幕输出"><a href="#键盘输入和屏幕输出" class="headerlink" title="键盘输入和屏幕输出"></a>键盘输入和屏幕输出</h2><blockquote>
 <p><strong>键盘输入</strong>是通过在变量名前面加一个“&amp;”符号实现的，如：&amp;V_INPUT。如果此变量是数值型（如：number，integer等），在提示输入时直接输入数据；如果此变量是字符型（如：varchar2()等），有两个办法输入：</p>
 <ol>
 <li>如果书写时是：&amp;V_INPUT，那么输入时要加单引号“’”把字符串引起来；</li>
@@ -592,7 +591,73 @@
 3. 自定义异常。
 </code></pre><h3 id="PL-SQL异常"><a href="#PL-SQL异常" class="headerlink" title="PL/SQL异常"></a>PL/SQL异常</h3><p>异常处理块中包含了与异常相关的错误发生以及当错误发生时要进行执行和处理的代码。异常部分的语法一般如下：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">BEGIN</span></div><div class="line">…</div><div class="line"><span class="keyword">EXCEPTION</span></div><div class="line"><span class="keyword">WHEN</span> excep_name1 <span class="keyword">THEN</span></div><div class="line">  …</div><div class="line"><span class="keyword">WHEN</span> excep_name2 <span class="keyword">THEN</span></div><div class="line">  …</div><div class="line"><span class="keyword">WHEN</span> OTHERS <span class="keyword">THEN</span></div><div class="line">  …</div><div class="line"><span class="keyword">END</span>;</div></pre></td></tr></table></figure></p>
 <p>其中<excep_name1>和&lt; excep_name2&gt;都是异常名称。    </excep_name1></p>
-<h3 id="系统预定义异常"><a href="#系统预定义异常" class="headerlink" title="系统预定义异常"></a>系统预定义异常</h3><h3 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h3><p>异常不一定必须是Oracle返回的系统错误，用户可以在自己的应用程序中创建可触发及可处理的自定义异常，调用异常处理需要使用Raise语句。<br>1．定义异常处理<br>定义异常处理的语法如下：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">DECLARE</span></div><div class="line">异常名 <span class="keyword">EXCEPTION</span>;</div></pre></td></tr></table></figure></p>
+<h3 id="系统预定义异常"><a href="#系统预定义异常" class="headerlink" title="系统预定义异常"></a>系统预定义异常</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">异常名称</th>
+<th style="text-align:center">ORACLE错误</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">CURSOR_ALREADY_OPEN</td>
+<td style="text-align:center">ORA-6511</td>
+<td style="text-align:center">试图打开一个已打开的光标</td>
+</tr>
+<tr>
+<td style="text-align:center">DUP_VAL_ON_INDEX</td>
+<td style="text-align:center">ORA-0001</td>
+<td style="text-align:center">试图破坏一个唯一性限制</td>
+</tr>
+<tr>
+<td style="text-align:center">INVALID_CURSOR</td>
+<td style="text-align:center">ORA-1001</td>
+<td style="text-align:center">试图使用一个无效的光标</td>
+</tr>
+<tr>
+<td style="text-align:center">INVALID_NUMBER</td>
+<td style="text-align:center">ORA-1722</td>
+<td style="text-align:center">试图对非数字值进行数字操作</td>
+</tr>
+<tr>
+<td style="text-align:center">LOGIN_DENIED</td>
+<td style="text-align:center">ORA-1017</td>
+<td style="text-align:center">无效的用户名或者口令</td>
+</tr>
+<tr>
+<td style="text-align:center">NO_DATA_FOUND</td>
+<td style="text-align:center">ORA-1403</td>
+<td style="text-align:center">查询未找到数据</td>
+</tr>
+<tr>
+<td style="text-align:center">NOT_LOGGED_ON</td>
+<td style="text-align:center">ORA-1012</td>
+<td style="text-align:center">还未连接就试图进行数据库操作</td>
+</tr>
+<tr>
+<td style="text-align:center">PROGRAM_ERROR</td>
+<td style="text-align:center">ORA-6501</td>
+<td style="text-align:center">内部错误</td>
+</tr>
+<tr>
+<td style="text-align:center">ROWTYPE_MISMATCH</td>
+<td style="text-align:center">ORA-6504</td>
+<td style="text-align:center">主变量和光标的类型不兼容</td>
+</tr>
+<tr>
+<td style="text-align:center">STORAGE_ERROR</td>
+<td style="text-align:center">ORA-6500</td>
+<td style="text-align:center">内部错误</td>
+</tr>
+<tr>
+<td style="text-align:center">TIMEOUT_ON_RESOURCE</td>
+<td style="text-align:center">ORA-0051</td>
+<td style="text-align:center">发生超时</td>
+</tr>
+</tbody>
+</table>
+<h3 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h3><p>异常不一定必须是Oracle返回的系统错误，用户可以在自己的应用程序中创建可触发及可处理的自定义异常，调用异常处理需要使用Raise语句。<br>1．定义异常处理<br>定义异常处理的语法如下：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">DECLARE</span></div><div class="line">异常名 <span class="keyword">EXCEPTION</span>;</div></pre></td></tr></table></figure></p>
 <p>2．抛出异常<br>抛出异常就是触发异常，通常有三种方法：<br>（1）通过PL/SQL 运行时的引擎抛出异常。<br>（2）使用RAISE 语句。<br>（3）调用RAISE_APPLICATION_ERROR 存储过程。</p>
 <p>通常情况都是使用显式方法——RAISE 语句抛出异常，它可以抛出任何异常，不一定限制为预定义的异常。<br>处理语法如下：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">RAISE 异常名;</div></pre></td></tr></table></figure></p>
 <h3 id="处理异常"><a href="#处理异常" class="headerlink" title="处理异常"></a>处理异常</h3><p>处理异常的语法如下：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">EXCEPTION</div><div class="line">WHEN 异常名1 THEN</div><div class="line">  异常处理语句段1;</div><div class="line">WHEN 异常名2 THEN</div><div class="line">  异常处理语句段2;</div></pre></td></tr></table></figure></p>
@@ -850,7 +915,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#存储过程基本语法"><span class="nav-number">1.</span> <span class="nav-text">存储过程基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建存储过程"><span class="nav-number">1.1.</span> <span class="nav-text">创建存储过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调用存储过程"><span class="nav-number">1.2.</span> <span class="nav-text">调用存储过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除存储过程"><span class="nav-number">1.3.</span> <span class="nav-text">删除存储过程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PL-SQL基础"><span class="nav-number">2.</span> <span class="nav-text">PL/SQL基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#PL-SQL块的基本结构"><span class="nav-number">2.1.</span> <span class="nav-text">PL/SQL块的基本结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PL-SQL块类型"><span class="nav-number">2.2.</span> <span class="nav-text">PL/SQL块类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据类型"><span class="nav-number">2.3.</span> <span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本数据类型"><span class="nav-number">2.3.1.</span> <span class="nav-text">基本数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-type定义变量"><span class="nav-number">2.3.2.</span> <span class="nav-text">使用%type定义变量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常量、变量和表达式"><span class="nav-number">2.4.</span> <span class="nav-text">常量、变量和表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常量和变量"><span class="nav-number">2.4.1.</span> <span class="nav-text">常量和变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表达式"><span class="nav-number">2.4.2.</span> <span class="nav-text">表达式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#条件控制语句"><span class="nav-number">2.5.</span> <span class="nav-text">条件控制语句</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#IF…THEN-语句"><span class="nav-number">2.5.1.</span> <span class="nav-text">IF…THEN 语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IF…THEN…ELSE语句"><span class="nav-number">2.5.2.</span> <span class="nav-text">IF…THEN…ELSE语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IF…THEN…ELSIF语句"><span class="nav-number">2.5.3.</span> <span class="nav-text">IF…THEN…ELSIF语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CASE-语句"><span class="nav-number">2.5.4.</span> <span class="nav-text">CASE 语句</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#循环控制语句"><span class="nav-number">2.6.</span> <span class="nav-text">循环控制语句</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#LOOP…EXIT-WHEN…END-LOOP循环控制"><span class="nav-number">2.6.1.</span> <span class="nav-text">LOOP…EXIT WHEN…END LOOP循环控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LOOP…IF…THEN-EXIT…END-LOOP循环控制"><span class="nav-number">2.6.2.</span> <span class="nav-text">LOOP…IF…THEN EXIT…END LOOP循环控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WHILE…LOOP…END-LOOP循环控制"><span class="nav-number">2.6.3.</span> <span class="nav-text">WHILE…LOOP…END LOOP循环控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FOR…LOOP循环控制"><span class="nav-number">2.6.4.</span> <span class="nav-text">FOR…LOOP循环控制</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PL-SQL的异常"><span class="nav-number">2.7.</span> <span class="nav-text">PL/SQL的异常</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PL-SQL异常"><span class="nav-number">2.7.1.</span> <span class="nav-text">PL/SQL异常</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#系统预定义异常"><span class="nav-number">2.7.2.</span> <span class="nav-text">系统预定义异常</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义异常"><span class="nav-number">2.7.3.</span> <span class="nav-text">自定义异常</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#处理异常"><span class="nav-number">2.7.4.</span> <span class="nav-text">处理异常</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用Java调用Oracle存储过程"><span class="nav-number">3.</span> <span class="nav-text">使用Java调用Oracle存储过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#无返回值的存储过程"><span class="nav-number">3.1.</span> <span class="nav-text">无返回值的存储过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#测试建表："><span class="nav-number">3.1.1.</span> <span class="nav-text">测试建表：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#存储过程"><span class="nav-number">3.1.2.</span> <span class="nav-text">存储过程:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在Java里调用"><span class="nav-number">3.1.3.</span> <span class="nav-text">在Java里调用:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#有返回值的存储过程（非列表）"><span class="nav-number">3.2.</span> <span class="nav-text">有返回值的存储过程（非列表）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#存储过程-1"><span class="nav-number">3.2.1.</span> <span class="nav-text">存储过程:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在Java里调用-1"><span class="nav-number">3.2.2.</span> <span class="nav-text">在Java里调用:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#返回列表"><span class="nav-number">3.3.</span> <span class="nav-text">返回列表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-建一个程序包"><span class="nav-number">3.3.1.</span> <span class="nav-text">1. 建一个程序包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-建立存储过程"><span class="nav-number">3.3.2.</span> <span class="nav-text">2. 建立存储过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-在Java里调用"><span class="nav-number">3.3.3.</span> <span class="nav-text">3. 在Java里调用</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#存储过程基本语法"><span class="nav-number">1.</span> <span class="nav-text">存储过程基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建存储过程"><span class="nav-number">1.1.</span> <span class="nav-text">创建存储过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调用存储过程"><span class="nav-number">1.2.</span> <span class="nav-text">调用存储过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除存储过程"><span class="nav-number">1.3.</span> <span class="nav-text">删除存储过程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-PL-SQL基础"><span class="nav-number">2.</span> <span class="nav-text">2. PL/SQL基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#PL-SQL块的基本结构"><span class="nav-number">2.1.</span> <span class="nav-text">PL/SQL块的基本结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PL-SQL块类型"><span class="nav-number">2.2.</span> <span class="nav-text">PL/SQL块类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据类型"><span class="nav-number">2.3.</span> <span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本数据类型"><span class="nav-number">2.3.1.</span> <span class="nav-text">基本数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-type定义变量"><span class="nav-number">2.3.2.</span> <span class="nav-text">使用%type定义变量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常量、变量和表达式"><span class="nav-number">2.4.</span> <span class="nav-text">常量、变量和表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常量和变量"><span class="nav-number">2.4.1.</span> <span class="nav-text">常量和变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表达式"><span class="nav-number">2.4.2.</span> <span class="nav-text">表达式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#键盘输入和屏幕输出"><span class="nav-number">2.5.</span> <span class="nav-text">键盘输入和屏幕输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#条件控制语句"><span class="nav-number">2.6.</span> <span class="nav-text">条件控制语句</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#IF…THEN-语句"><span class="nav-number">2.6.1.</span> <span class="nav-text">IF…THEN 语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IF…THEN…ELSE语句"><span class="nav-number">2.6.2.</span> <span class="nav-text">IF…THEN…ELSE语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IF…THEN…ELSIF语句"><span class="nav-number">2.6.3.</span> <span class="nav-text">IF…THEN…ELSIF语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CASE-语句"><span class="nav-number">2.6.4.</span> <span class="nav-text">CASE 语句</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#循环控制语句"><span class="nav-number">2.7.</span> <span class="nav-text">循环控制语句</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#LOOP…EXIT-WHEN…END-LOOP循环控制"><span class="nav-number">2.7.1.</span> <span class="nav-text">LOOP…EXIT WHEN…END LOOP循环控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LOOP…IF…THEN-EXIT…END-LOOP循环控制"><span class="nav-number">2.7.2.</span> <span class="nav-text">LOOP…IF…THEN EXIT…END LOOP循环控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WHILE…LOOP…END-LOOP循环控制"><span class="nav-number">2.7.3.</span> <span class="nav-text">WHILE…LOOP…END LOOP循环控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FOR…LOOP循环控制"><span class="nav-number">2.7.4.</span> <span class="nav-text">FOR…LOOP循环控制</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PL-SQL的异常"><span class="nav-number">2.8.</span> <span class="nav-text">PL/SQL的异常</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PL-SQL异常"><span class="nav-number">2.8.1.</span> <span class="nav-text">PL/SQL异常</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#系统预定义异常"><span class="nav-number">2.8.2.</span> <span class="nav-text">系统预定义异常</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义异常"><span class="nav-number">2.8.3.</span> <span class="nav-text">自定义异常</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#处理异常"><span class="nav-number">2.8.4.</span> <span class="nav-text">处理异常</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用Java调用Oracle存储过程"><span class="nav-number">3.</span> <span class="nav-text">使用Java调用Oracle存储过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#无返回值的存储过程"><span class="nav-number">3.1.</span> <span class="nav-text">无返回值的存储过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#测试建表："><span class="nav-number">3.1.1.</span> <span class="nav-text">测试建表：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#存储过程"><span class="nav-number">3.1.2.</span> <span class="nav-text">存储过程:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在Java里调用"><span class="nav-number">3.1.3.</span> <span class="nav-text">在Java里调用:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#有返回值的存储过程（非列表）"><span class="nav-number">3.2.</span> <span class="nav-text">有返回值的存储过程（非列表）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#存储过程-1"><span class="nav-number">3.2.1.</span> <span class="nav-text">存储过程:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在Java里调用-1"><span class="nav-number">3.2.2.</span> <span class="nav-text">在Java里调用:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#返回列表"><span class="nav-number">3.3.</span> <span class="nav-text">返回列表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-建一个程序包"><span class="nav-number">3.3.1.</span> <span class="nav-text">1. 建一个程序包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-建立存储过程"><span class="nav-number">3.3.2.</span> <span class="nav-text">2. 建立存储过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-在Java里调用"><span class="nav-number">3.3.3.</span> <span class="nav-text">3. 在Java里调用</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
