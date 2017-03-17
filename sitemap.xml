@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.chunfengshini.com/post/learn-java-deep-clone-shallow-clone/</loc>
+    
+    <lastmod>2017-03-17T08:58:04.995Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.chunfengshini.com/post/learn-java-collections-hashmap/</loc>
+    
+    <lastmod>2017-03-17T08:57:10.011Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.chunfengshini.com/post/learn-java-collections/</loc>
     
-    <lastmod>2017-03-08T07:10:57.433Z</lastmod>
+    <lastmod>2017-03-17T08:57:00.584Z</lastmod>
     
   </url>
   

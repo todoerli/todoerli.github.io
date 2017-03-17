@@ -4,12 +4,70 @@
 
     
   <url>
+    <loc>http://www.chunfengshini.com/post/learn-java-deep-clone-shallow-clone/</loc>
+    <lastmod>2017-03-17T08:58:04.995Z</lastmod>
+    <data>
+        <display>
+        <title>[转载]Java中的深复制和浅复制</title>
+        <pubTime>2017-01-01T08:42:09.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>Clone</tag>
+         
+        <tag>Shallow Copy、Deep Copy</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://www.chunfengshini.com/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+             
+              <breadCrumb title="笔记" url="http://www.chunfengshini.com/categories/%E6%8A%80%E6%9C%AF/%E7%AC%94%E8%AE%B0/"/>
+          
+             
+              <breadCrumb title="转载" url="http://www.chunfengshini.com/categories/%E6%8A%80%E6%9C%AF/%E7%AC%94%E8%AE%B0/%E8%BD%AC%E8%BD%BD/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.chunfengshini.com/post/learn-java-collections-hashmap/</loc>
+    <lastmod>2017-03-17T08:57:10.011Z</lastmod>
+    <data>
+        <display>
+        <title>Java集合类之HashMap</title>
+        <pubTime>2017-02-07T07:31:26.000Z</pubTime>
+        
+        <tag>Java集合</tag>
+         
+        <tag>HashMap</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://www.chunfengshini.com/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+             
+              <breadCrumb title="笔记" url="http://www.chunfengshini.com/categories/%E6%8A%80%E6%9C%AF/%E7%AC%94%E8%AE%B0/"/>
+          
+             
+              <breadCrumb title="Java集合框架" url="http://www.chunfengshini.com/categories/%E6%8A%80%E6%9C%AF/%E7%AC%94%E8%AE%B0/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.chunfengshini.com/post/learn-java-collections/</loc>
-    <lastmod>2017-03-08T07:10:57.433Z</lastmod>
+    <lastmod>2017-03-17T08:57:00.584Z</lastmod>
     <data>
         <display>
         <title>Java集合框架学习笔记</title>
-        <pubTime>2017-03-03T02:46:29.000Z</pubTime>
+        <pubTime>2017-02-01T02:46:29.000Z</pubTime>
         
         <tag>Java集合</tag>
          

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.chunfengshini.com/"/>
-  <updated>2017-03-08T07:10:57.433Z</updated>
+  <updated>2017-03-17T08:57:10.011Z</updated>
   <id>http://www.chunfengshini.com/</id>
   
   <author>
@@ -16,11 +16,40 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Java集合类之HashMap</title>
+    <link href="http://www.chunfengshini.com/post/learn-java-collections-hashmap/"/>
+    <id>http://www.chunfengshini.com/post/learn-java-collections-hashmap/</id>
+    <published>2017-02-07T07:31:26.000Z</published>
+    <updated>2017-03-17T08:57:10.011Z</updated>
+    
+    <content type="html"><![CDATA[<p>HashMap是基于哈希表的Map接口的<strong>非同步</strong>实现，允许使用null值和null元素。HashMap不保证元素顺序，根据需要容器可能会对元素重新哈希（resize），此时元素顺序随之改变，因此不同时间对HashMap的遍历得到的元素顺序可能会不同。当key==null时，将存在table[0]即第一个bucket桶中，hash值为0。<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">package java.util;</div><div class="line">import java.io.*;</div><div class="line">public class HashMap&lt;K,V&gt;</div><div class="line">    extends AbstractMap&lt;K,V&gt;</div><div class="line">    implements Map&lt;K,V&gt;, Cloneable, Serializable</div><div class="line">&#123;</div><div class="line">    static final int DEFAULT_INITIAL_CAPACITY = 16;//初始容量为16（容量必须为2的n次方）</div><div class="line"></div><div class="line">    static final float DEFAULT_LOAD_FACTOR = 0.75f;//默认负载因子0.75，当bucket中的entries的数目大于capacity*load factor时就需要调整bucket的大小为当前的2倍，也就是再哈希。</div><div class="line"></div><div class="line">    transient Entry[] table;</div><div class="line"></div><div class="line">    transient int size;//map中存储的键值对数目</div><div class="line"></div><div class="line">    /**</div><div class="line">     * The next size value at which to resize (capacity * load factor).</div><div class="line">     * @serial</div><div class="line">     */</div><div class="line">    int threshold;</div><div class="line"></div><div class="line">    final float loadFactor;</div><div class="line"></div><div class="line">    transient int modCount;//记录HashMap被结构性修改的次数，用于实现”fast-fast“（快速失败）机制。</div><div class="line">	...//省略其他部分</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;HashMap是基于哈希表的Map接口的&lt;strong&gt;非同步&lt;/strong&gt;实现，允许使用null值和null元素。HashMap不保证元素顺序，根据需要容器可能会对元素重新哈希（resize），此时元素顺序随之改变，因此不同时间对HashMap的遍历得到的元素顺序可能会不同。当key==null时，将存在table[0]即第一个bucket桶中，hash值为0。&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://www.chunfengshini.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="笔记" scheme="http://www.chunfengshini.com/categories/%E6%8A%80%E6%9C%AF/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="Java集合框架" scheme="http://www.chunfengshini.com/categories/%E6%8A%80%E6%9C%AF/%E7%AC%94%E8%AE%B0/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/"/>
+    
+    
+      <category term="Java集合" scheme="http://www.chunfengshini.com/tags/Java%E9%9B%86%E5%90%88/"/>
+    
+      <category term="HashMap" scheme="http://www.chunfengshini.com/tags/HashMap/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Java集合框架学习笔记</title>
     <link href="http://www.chunfengshini.com/post/learn-java-collections/"/>
     <id>http://www.chunfengshini.com/post/learn-java-collections/</id>
-    <published>2017-03-03T02:46:29.000Z</published>
-    <updated>2017-03-08T07:10:57.433Z</updated>
+    <published>2017-02-01T02:46:29.000Z</published>
+    <updated>2017-03-17T08:57:00.584Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://docs.oracle.com/javase/8/docs/technotes/guides/collections/overview.html" target="_blank" rel="external">Java集合框架</a>由Java集合接口及其通用实现，特殊实现，并发实现，抽象实现，基础架构，算法，Array Utilities等组成。Java集合接口（Collection Interfaces）被分成两部分：java.util.Collection和java.util.Map。<br><a href="http://liujiacai.net/blog/2015/09/01/java-collection-overview/" target="_blank" rel="external">这两个顶层接口</a>：</p>
 <ul>
@@ -532,6 +561,41 @@
       <category term="FlashFire" scheme="http://www.chunfengshini.com/tags/FlashFire/"/>
     
       <category term="Root" scheme="http://www.chunfengshini.com/tags/Root/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[转载]Java中的深复制和浅复制</title>
+    <link href="http://www.chunfengshini.com/post/learn-java-deep-clone-shallow-clone/"/>
+    <id>http://www.chunfengshini.com/post/learn-java-deep-clone-shallow-clone/</id>
+    <published>2017-01-01T08:42:09.000Z</published>
+    <updated>2017-03-17T08:58:04.995Z</updated>
+    
+    <content type="html"><![CDATA[<p>Java语言的一个优点就是取消了指针的概念，但也导致了许多程序员在编程中常常忽略了对象与引用的区别，本文会试图澄清这一概念。并且由于Java不能通过简单的赋值来解决对象复制的问题，在开发过程中，也常常要要应用clone()方法来复制对象。本文会让你了解什么是影子clone与深度clone，认识它们的区别、优点及缺点。<br><a href="http://blog.csdn.net/qq_37267015/article/details/59136372?utm_source=tuicool&amp;utm_medium=referral" target="_blank" rel="external">Java中的深复制和浅复制</a></p>
+<blockquote>
+<p>对象拷贝(Object Copy)就是将一个对象的属性拷贝到另一个有着相同类类型的对象中去。在程序中拷贝对象是很常见的，主要是为了在新的上下文环境中复用对象的部分或全部 数据。Java中有三种类型的对象拷贝：浅拷贝(Shallow Copy)、深拷贝(Deep Copy)、延迟拷贝(Lazy Copy)<br><a href="http://www.jb51.net/article/48201.htm" target="_blank" rel="external">Java中的深拷贝和浅拷贝介绍</a></p>
+</blockquote>
+<p>-<strong>浅拷贝</strong>是按位拷贝对象，它会创建一个新对象，这个对象有着原始对象属性值的一份精确拷贝。如果属性是基本类型，拷贝的就是基本类型的值；如果属性是内存地址（引用类型），拷贝的就是内存地址 ，因此如果其中一个对象改变了这个地址，就会影响到另一个对象。<br><img src="/post/learn-java-deep-clone-shallow-clone/shallow copy.png" alt="java-collection-hierarchy" title="Shallow Copy"><br>在图中，SourceObject有一个int类型的属性 “field1”和一个引用类型属性”refObj”（引用ContainedObject类型的对象）。当对SourceObject做浅拷贝时，创建了CopiedObject，它有一个包含”field1”拷贝值的属性”field2”以及仍指向refObj本身的引用。由于”field1”是基本类型，所以只是将它的值拷贝给”field2”，但是由于”refObj”是一个引用类型, 所以CopiedObject指向”refObj”相同的地址。因此对SourceObject中的”refObj”所做的任何改变都会影响到CopiedObject。<br>-<strong>深拷贝</strong>会拷贝所有的属性,并拷贝属性指向的动态分配的内存。当对象和它所引用的对象一起拷贝时即发生深拷贝。深拷贝相比于浅拷贝速度较慢并且花销较大。<br><img src="/post/learn-java-deep-clone-shallow-clone/deep copy.png" alt="java-collection-hierarchy" title="Deep Copy"><br>在上图中，SourceObject有一个int类型的属性 “field1”和一个引用类型属性”refObj1”（引用ContainedObject类型的对象）。当对SourceObject做深拷贝时，创建了CopiedObject，它有一个包含”field1”拷贝值的属性”field2”以及包含”refObj1”拷贝值的引用类型属性”refObj2” 。因此对SourceObject中的”refObj”所做的任何改变都不会影响到CopiedObject</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Java语言的一个优点就是取消了指针的概念，但也导致了许多程序员在编程中常常忽略了对象与引用的区别，本文会试图澄清这一概念。并且由于Java不能通过简单的赋值来解决对象复制的问题，在开发过程中，也常常要要应用clone()方法来复制对象。本文会让你了解什么是影子clone与
+    
+    </summary>
+    
+      <category term="技术" scheme="http://www.chunfengshini.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="笔记" scheme="http://www.chunfengshini.com/categories/%E6%8A%80%E6%9C%AF/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="转载" scheme="http://www.chunfengshini.com/categories/%E6%8A%80%E6%9C%AF/%E7%AC%94%E8%AE%B0/%E8%BD%AC%E8%BD%BD/"/>
+    
+    
+      <category term="Java" scheme="http://www.chunfengshini.com/tags/Java/"/>
+    
+      <category term="Clone" scheme="http://www.chunfengshini.com/tags/Clone/"/>
+    
+      <category term="Shallow Copy、Deep Copy" scheme="http://www.chunfengshini.com/tags/Shallow-Copy%E3%80%81Deep-Copy/"/>
     
   </entry>
   
